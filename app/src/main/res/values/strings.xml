@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">IP Calculator</string>
+    <string name="netmask">Net Mask: </string>
+</resources>
