@@ -5,102 +5,111 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.alejandro.calculadoraip.Main">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="#eee"
-        android:padding="20dp">
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:stretchColumns="0,2">
-            <TableRow>
-                <EditText
-                    android:id="@+id/txt_ip"
-                    android:layout_weight="3"
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
-                    android:background="#ffffff"
-                    android:textColor="#222222"
-                    android:hint="Dirección IP"
-                    android:inputType="text"
-                    android:padding="10dp"/>
-                <TextView
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
-                    android:text="/"
-                    android:textColor="#222"
-                    android:textSize="20pt"
-                    android:textAlignment="center"/>
-                <EditText
-                    android:inputType="number"
-                    android:id="@+id/txt_mask"
-                    android:layout_weight="2"
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
-                    android:background="#ffffff"
-                    android:textColor="#222222"
-                    android:hint="Mask"
-                    android:padding="10dp"/>
-            </TableRow>
-        </TableLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="6"
-            android:orientation="vertical">
-            <Button
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:background="#eee">
+            <TableLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginTop="20dp"
-                android:text="Calcular"
-                android:textColor="#FFFFFF"
-                android:background="#264348"
-                android:layout_marginBottom="20dp"
-                android:onClick="calculate"/>
-            <TextView
-                android:id="@+id/lbl_broadcast"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:stretchColumns="0,2">
+                <TableRow>
+                    <EditText
+                        android:id="@+id/txt_ip"
+                        android:layout_weight="3"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:background="#ffffff"
+                        android:textColor="#222222"
+                        android:hint="Dirección IP"
+                        android:inputType="text"
+                        android:padding="10dp"/>
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:text="/"
+                        android:textColor="#222"
+                        android:textSize="20pt"
+                        android:textAlignment="center"/>
+                    <EditText
+                        android:inputType="number"
+                        android:id="@+id/txt_mask"
+                        android:layout_weight="2"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:background="#ffffff"
+                        android:textColor="#222222"
+                        android:hint="Mask"
+                        android:padding="10dp"/>
+                </TableRow>
+            </TableLayout>
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Broadcast id: x.x.x.x"
-                android:textColor="#222"
-                android:textSize="20sp"
-                android:padding="10dp" />
-            <TextView
-                android:id="@+id/lbl_net_id"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Network id: x.x.x.x"
-                android:textColor="#222"
-                android:textSize="20sp"
-                android:padding="10dp" />
-            <TextView
-                android:id="@+id/lbl_netmask"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Netmask: x.x.x.x"
-                android:textColor="#222"
-                android:textSize="20sp"
-                android:padding="10dp" />
-            <TextView
-                android:id="@+id/lbl_host"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Wildcard: 0"
-                android:textColor="#222"
-                android:textSize="20sp"
-                android:padding="10dp" />
-            <TextView
-                android:id="@+id/lbl_hosts_qty"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Hosts: 0"
-                android:textColor="#222"
-                android:textSize="20sp"
-                android:padding="10dp" />
+                android:layout_height="0dp"
+                android:layout_weight="6"
+                android:orientation="vertical">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Calcular"
+                    android:textColor="#FFFFFF"
+                    android:background="#264348"
+                    android:layout_marginBottom="20dp"
+                    android:onClick="calculate"/>
+                <TextView
+                    android:id="@+id/lbl_broadcast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Broadcast id: x.x.x.x"
+                    android:textColor="#222"
+                    android:textSize="20sp"
+                    android:padding="10dp" />
+                <TextView
+                    android:id="@+id/lbl_net_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Network id: x.x.x.x"
+                    android:textColor="#222"
+                    android:textSize="20sp"
+                    android:padding="10dp" />
+                <TextView
+                    android:id="@+id/lbl_netmask"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Netmask: x.x.x.x"
+                    android:textColor="#222"
+                    android:textSize="20sp"
+                    android:padding="10dp" />
+                <TextView
+                    android:id="@+id/lbl_host"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Wildcard: 0"
+                    android:textColor="#222"
+                    android:textSize="20sp"
+                    android:padding="10dp" />
+                <TextView
+                    android:id="@+id/lbl_hosts_part"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Hosts: 0"
+                    android:textColor="#222"
+                    android:textSize="20sp"
+                    android:padding="10dp" />
+                <TextView
+                    android:id="@+id/lbl_net_part"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nets: 0"
+                    android:textColor="#222"
+                    android:textSize="20sp"
+                    android:padding="10dp" />
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

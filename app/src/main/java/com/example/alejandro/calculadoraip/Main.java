@@ -16,9 +16,10 @@ public class Main extends AppCompatActivity {
 
     private TextView lblNetId = null;
     private TextView lblBroadcast = null;
-    private TextView lblHostQty = null;
+    private TextView lblHostPart = null;
     private TextView lblHosts = null;
     private TextView lblNetmask = null;
+    private TextView lblNetPart = null;
 
     private Calc calc = null;
 
@@ -32,16 +33,22 @@ public class Main extends AppCompatActivity {
 
         this.lblNetId = (TextView) findViewById(R.id.lbl_net_id);
         this.lblBroadcast = (TextView) findViewById(R.id.lbl_broadcast);
-        this.lblHostQty = (TextView) findViewById(R.id.lbl_hosts_qty);
+        this.lblHostPart = (TextView) findViewById(R.id.lbl_hosts_part);
         this.lblHosts = (TextView) findViewById(R.id.lbl_host);
         this.lblNetmask = (TextView) findViewById(R.id.lbl_netmask);
+        this.lblNetPart = (TextView) findViewById(R.id.lbl_net_part);
     }
 
     public void calculate (View view) {
         this.calc = new Calc(this.txtIp.getText().toString(), Integer.parseInt(this.txtNetmask.getText().toString()));
 
-        String netmask[] = this.calc.geInfo();
-        this.lblNetmask.setText("Netmask: " + netmask[0]);
-        this.lblHosts.setText("Wildcard: " + netmask[1]);
+        String info[] = this.calc.geInfo();
+
+        this.lblNetmask.setText("Netmask: " + info[0]);
+        this.lblHosts.setText("Wildcard: " + info[1]);
+        this.lblNetId.setText("Network: " + info[2]);
+        this.lblBroadcast.setText("Broadcast: " + info[3]);
+        this.lblHostPart.setText("Hosts: " + info[4]);
+        this.lblNetPart.setText("Nets: " + info[5]);
     }
 }
